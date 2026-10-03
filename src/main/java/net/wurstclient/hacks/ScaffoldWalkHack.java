@@ -7,8 +7,6 @@
  */
 package net.wurstclient.hacks;
 
-import java.util.Arrays;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
@@ -23,6 +21,9 @@ import net.wurstclient.Category;
 import net.wurstclient.SearchTags;
 import net.wurstclient.events.UpdateListener;
 import net.wurstclient.hack.Hack;
+import net.wurstclient.settings.InteractSwingSetting.InteractSwing;
+import net.wurstclient.settings.SliderSetting;
+import net.wurstclient.settings.SliderSetting.ValueDisplay;
 import net.wurstclient.util.BlockUtils;
 import net.wurstclient.util.RotationUtils;
 
@@ -30,10 +31,16 @@ import net.wurstclient.util.RotationUtils;
 	"auto bridge", "tower"})
 public final class ScaffoldWalkHack extends Hack implements UpdateListener
 {
+	private final SliderSetting blocksPerTick =
+		new SliderSetting("Blocks per tick",
+			"description.wurst.setting.scaffoldwalk.blocks_per_tick", 3, 1, 9,
+			1, ValueDisplay.INTEGER);
+	
 	public ScaffoldWalkHack()
 	{
 		super("ScaffoldWalk");
 		setCategory(Category.BLOCKS);
+		addSetting(blocksPerTick);
 	}
 	
 	@Override
@@ -91,44 +98,49 @@ public final class ScaffoldWalkHack extends Hack implements UpdateListener
 		int oldSlot = MC.player.getInventory().getSelectedSlot();
 		MC.player.getInventory().setSelectedSlot(newSlot);
 		
-		scaffoldTo(belowPlayer);
+		scaffoldTo(belowPlayer, blocksPerTick.getValueI());
 		
 		// reset slot
 		MC.player.getInventory().setSelectedSlot(oldSlot);
 	}
 	
-	private void scaffoldTo(BlockPos belowPlayer)
+	private void scaffoldTo(BlockPos belowPlayer, int maxBlocks)
 	{
-		// tries to place a block directly under the player
-		if(placeBlock(belowPlayer))
-			return;
-			
-		// if that doesn't work, tries to place a block next to the block that's
-		// under the player
-		Direction[] sides = Direction.values();
+		Direction forward = MC.player.getDirection();
+		Direction[] sides = {forward, forward.getClockWise(),
+			forward.getCounterClockWise(), forward.getOpposite()};
+		
+		int placed = placeBlock(belowPlayer) ? 1 : 0;
+		
 		for(Direction side : sides)
 		{
-			BlockPos neighbor = belowPlayer.relative(side);
-			if(placeBlock(neighbor))
+			if(placed >= maxBlocks)
 				return;
+			
+			if(placeBlock(belowPlayer.relative(side)))
+				placed++;
 		}
 		
-		// if that doesn't work, tries to place a block next to a block that's
-		// next to the block that's under the player
 		for(Direction side : sides)
-			for(Direction side2 : Arrays.copyOfRange(sides, side.ordinal(), 6))
+			for(Direction side2 : sides)
 			{
-				if(side.getOpposite().equals(side2))
+				if(placed >= maxBlocks)
+					return;
+				
+				if(side2 == side || side2 == side.getOpposite())
 					continue;
 				
-				BlockPos neighbor = belowPlayer.relative(side).relative(side2);
-				if(placeBlock(neighbor))
-					return;
+				BlockPos diagonal = belowPlayer.relative(side).relative(side2);
+				if(placeBlock(diagonal))
+					placed++;
 			}
 	}
 	
 	private boolean placeBlock(BlockPos pos)
 	{
+		if(!BlockUtils.getState(pos).canBeReplaced())
+			return false;
+		
 		Vec3 eyesPos = RotationUtils.getEyesPos();
 		
 		for(Direction side : Direction.values())
@@ -156,7 +168,7 @@ public final class ScaffoldWalkHack extends Hack implements UpdateListener
 			RotationUtils.getNeededRotations(hitVec).sendPlayerLookPacket();
 			IMC.getInteractionManager().rightClickBlock(neighbor, side2,
 				hitVec);
-			MC.player.swing(InteractionHand.MAIN_HAND);
+			InteractSwing.CLIENT.swing(InteractionHand.MAIN_HAND);
 			MC.rightClickDelay = 4;
 			
 			return true;
