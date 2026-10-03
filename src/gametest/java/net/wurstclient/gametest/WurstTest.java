@@ -48,7 +48,7 @@ public class WurstTest implements FabricClientGameTest
 	@Override
 	public void runTest(ClientGameTestContext context)
 	{
-		LOGGER.info("Starting Wurst Client GameTest");
+		LOGGER.info("Starting CACA Client GameTest");
 		hideSplashTexts(context);
 		waitForTitleScreenFade(context);
 		

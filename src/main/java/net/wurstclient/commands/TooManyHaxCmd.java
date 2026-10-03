@@ -39,7 +39,7 @@ public final class TooManyHaxCmd extends Command
 			".toomanyhax list [<page>]", ".toomanyhax load-profile <file>",
 			".toomanyhax save-profile <file>",
 			".toomanyhax list-profiles [<page>]",
-			"Profiles are saved in '.minecraft/wurst/toomanyhax'.");
+			"Profiles are saved in '.minecraft/caca/toomanyhax'.");
 	}
 	
 	@Override

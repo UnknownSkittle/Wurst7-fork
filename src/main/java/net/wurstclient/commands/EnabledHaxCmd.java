@@ -30,7 +30,7 @@ public final class EnabledHaxCmd extends Command
 			".enabledhax load-profile <file>",
 			".enabledhax save-profile <file>",
 			".enabledhax list-profiles [<page>]",
-			"Profiles are saved in '.minecraft/wurst/enabled hacks'.");
+			"Profiles are saved in '.minecraft/caca/enabled hacks'.");
 	}
 	
 	@Override

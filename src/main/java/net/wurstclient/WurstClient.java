@@ -79,7 +79,7 @@ public enum WurstClient
 	
 	public void initialize()
 	{
-		System.out.println("Starting Wurst Client...");
+		System.out.println("Starting CACA Client...");
 		
 		MC = Minecraft.getInstance();
 		IMC = (IMinecraftClient)MC;
@@ -148,7 +148,7 @@ public enum WurstClient
 	private Path createWurstFolder()
 	{
 		Path dotMinecraftFolder = MC.gameDirectory.toPath().normalize();
-		Path wurstFolder = dotMinecraftFolder.resolve("wurst");
+		Path wurstFolder = dotMinecraftFolder.resolve("caca");
 		
 		try
 		{
@@ -157,7 +157,7 @@ public enum WurstClient
 		}catch(IOException e)
 		{
 			throw new RuntimeException(
-				"Couldn't create .minecraft/wurst folder.", e);
+				"Couldn't create .minecraft/caca folder.", e);
 		}
 		
 		return wurstFolder;

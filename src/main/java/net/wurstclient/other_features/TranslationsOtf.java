@@ -20,7 +20,7 @@ public final class TranslationsOtf extends OtherFeature
 {
 	private final CheckboxSetting forceEnglish = new CheckboxSetting(
 		"Force English",
-		"Displays the Wurst Client in English, even if Minecraft is set to a different language.",
+		"Displays the CACA Client in English, even if Minecraft is set to a different language.",
 		true);
 	
 	public TranslationsOtf()

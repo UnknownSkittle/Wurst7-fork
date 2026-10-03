@@ -29,7 +29,7 @@ public final class SettingsCmd extends Command
 		super("settings", "Allows you to make profiles of your settings.",
 			".settings load-profile <file>", ".settings save-profile <file>",
 			".settings list-profiles [<page>]",
-			"Profiles are saved in '.minecraft/wurst/settings'.");
+			"Profiles are saved in '.minecraft/caca/settings'.");
 	}
 	
 	@Override

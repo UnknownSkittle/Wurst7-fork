@@ -135,7 +135,7 @@ public class WurstOptionsScreen extends Screen
 		
 		new WurstOptionsButton(54, 120, () -> "Donate",
 			"§n§lWurstClient.net/donate\n"
-				+ "Donate now to help me keep the Wurst Client alive and free"
+				+ "Donate now to help me keep the CACA Client alive and free"
 				+ " to use for everyone.\n\n"
 				+ "Every bit helps and is much appreciated! You can also get a"
 				+ " few cool perks in return.",
