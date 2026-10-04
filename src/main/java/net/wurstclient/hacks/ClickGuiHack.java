@@ -24,15 +24,15 @@ import net.wurstclient.settings.SliderSetting.ValueDisplay;
 public final class ClickGuiHack extends Hack
 {
 	private final ColorSetting bgColor =
-		new ColorSetting("Background", "Background color", new Color(0x404040));
+		new ColorSetting("Background", "Background color", new Color(0x17151B));
 	
 	private final ColorSetting acColor =
-		new ColorSetting("Accent", "Accent color", new Color(0x101010));
+		new ColorSetting("Accent", "Accent color", new Color(0xFF5CA8));
 	
 	private final ColorSetting txtColor =
-		new ColorSetting("Text", "Text color", new Color(0xF0F0F0));
+		new ColorSetting("Text", "Text color", new Color(0xF6F1F5));
 	
-	private final SliderSetting opacity = new SliderSetting("Opacity", 0.5,
+	private final SliderSetting opacity = new SliderSetting("Opacity", 0.82,
 		0.15, 0.85, 0.01, ValueDisplay.PERCENTAGE);
 	
 	private final SliderSetting ttOpacity = new SliderSetting("Tooltip opacity",

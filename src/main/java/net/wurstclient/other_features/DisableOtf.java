@@ -12,22 +12,22 @@ import net.wurstclient.SearchTags;
 import net.wurstclient.other_feature.OtherFeature;
 import net.wurstclient.settings.CheckboxSetting;
 
-@SearchTags({"turn off", "hide wurst logo", "ghost mode", "stealth mode",
+@SearchTags({"turn off", "hide CaCa logo", "ghost mode", "stealth mode",
 	"vanilla Minecraft"})
 @DontBlock
 public final class DisableOtf extends OtherFeature
 {
 	private final CheckboxSetting hideEnableButton = new CheckboxSetting(
 		"Hide enable button",
-		"Removes the \"Enable Wurst\" button as soon as you close the Statistics screen."
-			+ " You will have to restart the game to re-enable Wurst.",
+		"Removes the \"Enable CaCa\" button as soon as you close the Statistics screen."
+			+ " You will have to restart the game to re-enable CaCa.",
 		false);
 	
 	public DisableOtf()
 	{
-		super("DisableWurst",
-			"To disable Wurst, go to the Statistics screen and press the \"Disable Wurst\" button.\n"
-				+ "It will turn into an \"Enable Wurst\" button once pressed.");
+		super("DisableCaCa",
+			"To disable CaCa, go to the Statistics screen and press the \"Disable CaCa\" button.\n"
+				+ "It will turn into an \"Enable CaCa\" button once pressed.");
 		addSetting(hideEnableButton);
 	}
 	

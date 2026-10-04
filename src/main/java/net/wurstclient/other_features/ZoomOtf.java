@@ -41,7 +41,7 @@ public final class ZoomOtf extends OtherFeature implements MouseScrollListener
 	
 	private final TextFieldSetting keybind = new TextFieldSetting("Keybind",
 		"Determines the zoom keybind.\n\n"
-			+ "Instead of editing this value manually, you should go to Wurst"
+			+ "Instead of editing this value manually, you should go to CaCa"
 			+ " Options -> Zoom and set it there.",
 		"key.keyboard.v", this::isValidKeybind);
 	
@@ -52,7 +52,7 @@ public final class ZoomOtf extends OtherFeature implements MouseScrollListener
 	{
 		super("Zoom", "Allows you to zoom in.\n"
 			+ "By default, the zoom is activated by pressing the \u00a7lV\u00a7r key.\n"
-			+ "Go to Wurst Options -> Zoom to change this keybind.");
+			+ "Go to CaCa Options -> Zoom to change this keybind.");
 		addSetting(level);
 		addSetting(scroll);
 		addSetting(zoomInScreens);

@@ -16,7 +16,7 @@ import net.wurstclient.other_feature.OtherFeature;
 import net.wurstclient.settings.ColorSetting;
 import net.wurstclient.settings.EnumSetting;
 
-@SearchTags({"wurst logo", "top left corner"})
+@SearchTags({"caca logo", "top left corner"})
 @DontBlock
 public final class WurstLogoOtf extends OtherFeature
 {
@@ -33,7 +33,7 @@ public final class WurstLogoOtf extends OtherFeature
 	
 	public WurstLogoOtf()
 	{
-		super("WurstLogo", "Shows the Wurst logo and version on the screen.");
+		super("CaCaLogo", "Shows the CaCa logo and version on the screen.");
 		addSetting(bgColor);
 		addSetting(txtColor);
 		addSetting(visibility);

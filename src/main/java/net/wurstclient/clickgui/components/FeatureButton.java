@@ -111,10 +111,13 @@ public final class FeatureButton extends Component
 		context.guiRenderState.up();
 		
 		// outlines
-		int outlineColor = RenderUtils.toIntColor(GUI.getAcColor(), 0.5F);
+		int outlineColor = 0x50796C76;
 		RenderUtils.drawBorder2D(context, x1, y1, x2, y2, outlineColor);
 		if(hasSettings)
 			RenderUtils.drawLine2D(context, x3, y1, x3, y2, outlineColor);
+		if(feature.isEnabled())
+			context.fill(x1, y1, x1 + 2, y2,
+				RenderUtils.toIntColor(GUI.getAcColor(), GUI.getOpacity()));
 		
 		// arrow
 		if(hasSettings)
@@ -123,15 +126,15 @@ public final class FeatureButton extends Component
 		
 		// text
 		String name = feature.getName();
-		int tx = x1 + (x3 - x1 - TR.width(name)) / 2;
-		int ty = y1 + 2;
+		int tx = x1 + 5;
+		int ty = y1 + (getHeight() - TR.lineHeight) / 2;
 		context.text(TR, name, tx, ty, GUI.getTxtColor(), false);
 	}
 	
 	private int getButtonColor(boolean enabled, boolean hovering)
 	{
-		float[] rgb = enabled ? new float[]{0, 1, 0} : GUI.getBgColor();
-		float opacity = GUI.getOpacity() * (hovering ? 1.5F : 1);
+		float[] rgb = enabled ? GUI.getAcColor() : GUI.getBgColor();
+		float opacity = GUI.getOpacity() * (hovering ? 1.25F : 1);
 		return RenderUtils.toIntColor(rgb, opacity);
 	}
 	
@@ -146,6 +149,6 @@ public final class FeatureButton extends Component
 	@Override
 	public int getDefaultHeight()
 	{
-		return 11;
+		return 13;
 	}
 }

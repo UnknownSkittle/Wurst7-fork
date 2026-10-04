@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "caca",
   "version": "${version}",
-  "name": "CACA Client",
+  "name": "CaCa",
   "description": "Temporary Client for the bedrock-masons on 6b6t",
   "authors": [
     "Unknown_Skittle"

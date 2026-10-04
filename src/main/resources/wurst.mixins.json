@@ -61,6 +61,8 @@
     "StatsScreenMixin",
     "StringDecomposerMixin",
     "TitleScreenMixin",
+    "TrackedWaypointChunkAccessor",
+    "TrackedWaypointPositionAccessor",
     "autosprint.LocalPlayerMixin",
     "freecam.CameraMixin",
     "freecam.LocalPlayerMixin",

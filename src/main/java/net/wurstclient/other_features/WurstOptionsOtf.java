@@ -20,7 +20,7 @@ import net.wurstclient.SearchTags;
 import net.wurstclient.other_feature.OtherFeature;
 import net.wurstclient.settings.EnumSetting;
 
-@SearchTags({"wurst options", "settings"})
+@SearchTags({"caca options", "settings"})
 @DontBlock
 public final class WurstOptionsOtf extends OtherFeature
 {
@@ -33,7 +33,7 @@ public final class WurstOptionsOtf extends OtherFeature
 	
 	public WurstOptionsOtf()
 	{
-		super("WurstOptions", "description.wurst.other_feature.wurstoptions");
+		super("CaCaOptions", "description.wurst.other_feature.wurstoptions");
 		addSetting(location);
 	}
 	
@@ -54,7 +54,7 @@ public final class WurstOptionsOtf extends OtherFeature
 		MutableComponent message = Component.literal("            Options");
 		
 		MutableComponent narration =
-			Component.translatable("gui.narrate.button", "Wurst Options");
+			Component.translatable("gui.narrate.button", "CaCa Options");
 		
 		Tooltip tooltip = Tooltip.create(Component.literal(getDescription()));
 		

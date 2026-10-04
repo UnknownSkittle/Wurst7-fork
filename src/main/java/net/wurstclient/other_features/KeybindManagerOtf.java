@@ -20,7 +20,7 @@ public final class KeybindManagerOtf extends OtherFeature
 	public KeybindManagerOtf()
 	{
 		super("Keybinds",
-			"This is just a shortcut to let you open the Keybind Manager from within the GUI. Normally you would go to Wurst Options > Keybinds.");
+			"This is just a shortcut to let you open the Keybind Manager from within the GUI. Normally you would go to CaCa Options > Keybinds.");
 	}
 	
 	@Override

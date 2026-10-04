@@ -68,6 +68,7 @@ public final class HackList implements UpdateListener
 	public final AutoWalkHack autoWalkHack = new AutoWalkHack();
 	public final BarrierEspHack barrierEspHack = new BarrierEspHack();
 	public final BaseFinderHack baseFinderHack = new BaseFinderHack();
+	public final BaseHunterHack baseHunterHack = new BaseHunterHack();
 	public final BlinkHack blinkHack = new BlinkHack();
 	public final BoatFlyHack boatFlyHack = new BoatFlyHack();
 	public final BonemealAuraHack bonemealAuraHack = new BonemealAuraHack();
@@ -105,6 +106,7 @@ public final class HackList implements UpdateListener
 	public final ForceOpHack forceOpHack = new ForceOpHack();
 	public final FreecamHack freecamHack = new FreecamHack();
 	public final FullbrightHack fullbrightHack = new FullbrightHack();
+	public final GhostBlocksHack ghostBlocksHack = new GhostBlocksHack();
 	public final GlideHack glideHack = new GlideHack();
 	public final HandNoClipHack handNoClipHack = new HandNoClipHack();
 	public final HeadRollHack headRollHack = new HeadRollHack();
@@ -153,9 +155,11 @@ public final class HackList implements UpdateListener
 	public final NukerLegitHack nukerLegitHack = new NukerLegitHack();
 	public final OpenWaterEspHack openWaterEspHack = new OpenWaterEspHack();
 	public final OverlayHack overlayHack = new OverlayHack();
+	public final PacketFlyHack packetFlyHack = new PacketFlyHack();
 	public final PanicHack panicHack = new PanicHack();
 	public final ParkourHack parkourHack = new ParkourHack();
 	public final PlayerEspHack playerEspHack = new PlayerEspHack();
+	public final PlayerLocatorHack playerLocatorHack = new PlayerLocatorHack();
 	public final PortalEspHack portalEspHack = new PortalEspHack();
 	public final PortalGuiHack portalGuiHack = new PortalGuiHack();
 	public final PotionSaverHack potionSaverHack = new PotionSaverHack();
@@ -172,6 +176,7 @@ public final class HackList implements UpdateListener
 	public final SkinDerpHack skinDerpHack = new SkinDerpHack();
 	public final SneakHack sneakHack = new SneakHack();
 	public final SnowShoeHack snowShoeHack = new SnowShoeHack();
+	public final SpearKillHack spearKillHack = new SpearKillHack();
 	public final SpeedHackHack speedHackHack = new SpeedHackHack();
 	public final SpeedNukerHack speedNukerHack = new SpeedNukerHack();
 	public final SpiderHack spiderHack = new SpiderHack();

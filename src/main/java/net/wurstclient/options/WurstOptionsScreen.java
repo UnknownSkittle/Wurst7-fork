@@ -75,7 +75,7 @@ public class WurstOptionsScreen extends Screen
 		
 		new WurstOptionsButton(-154, 48,
 			() -> "Count Users: " + (plausible.isEnabled() ? "ON" : "OFF"),
-			"Counts how many people are using Wurst and which versions are the"
+			"Counts how many people are using CaCa and which versions are the"
 				+ " most popular. This data helps me to decide when I can stop"
 				+ " supporting old versions.\n\n"
 				+ "These statistics are completely anonymous, never sold, and"
@@ -92,7 +92,7 @@ public class WurstOptionsScreen extends Screen
 		
 		new WurstOptionsButton(-154, 96,
 			() -> "Translations: " + (!forceEnglish.isChecked() ? "ON" : "OFF"),
-			"Allows text in Wurst to be displayed in other languages than"
+			"Allows text in CaCa to be displayed in other languages than"
 				+ " English. It will use the same language that Minecraft is"
 				+ " set to.\n\n" + "This is an experimental feature!",
 			b -> forceEnglish.setChecked(!forceEnglish.isChecked()));
@@ -137,7 +137,7 @@ public class WurstOptionsScreen extends Screen
 		
 		new WurstOptionsButton(54, 120, () -> "Donate",
 			"§n§lWurstClient.net/donate\n"
-				+ "Donate now to help me keep the CACA Client alive and free"
+				+ "Donate now to help me keep CaCa alive and free"
 				+ " to use for everyone.\n\n"
 				+ "Every bit helps and is much appreciated! You can also get a"
 				+ " few cool perks in return.",
@@ -170,7 +170,7 @@ public class WurstOptionsScreen extends Screen
 		int y1 = 40;
 		int y2 = height / 4 + 24 - 28;
 		
-		context.centeredText(tr, "Wurst Options", middleX, y1,
+		context.centeredText(tr, "CaCa Options", middleX, y1,
 			CommonColors.WHITE);
 		
 		context.centeredText(tr, "Settings", middleX - 104, y2,

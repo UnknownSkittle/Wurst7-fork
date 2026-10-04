@@ -49,7 +49,7 @@ public class WurstTest implements FabricClientGameTest
 	@Override
 	public void runTest(ClientGameTestContext context)
 	{
-		LOGGER.info("Starting CACA Client GameTest");
+		LOGGER.info("Starting CaCa GameTest");
 		hideSplashTexts(context);
 		waitForTitleScreenFade(context);
 		
@@ -116,7 +116,7 @@ public class WurstTest implements FabricClientGameTest
 		input.pressKey(InputConstants.KEY_ESCAPE);
 		
 		runWurstCommand(context,
-			"setmode WurstLogo visibility only_when_outdated");
+			"setmode CaCaLogo visibility only_when_outdated");
 		runWurstCommand(context, "setcheckbox HackList animations off");
 		
 		new PauseScreenTest(context, spContext).run();

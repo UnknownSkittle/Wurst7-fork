@@ -31,7 +31,7 @@ public final class PauseScreenTest extends SingleplayerTest
 		context.waitTick();// for the tooltip to appear
 		assertScreenshotEquals("game_menu", "https://i.imgur.com/WxuKtG6.png");
 		
-		logger.info("Opening Wurst Options screen");
+		logger.info("Opening CaCa Options screen");
 		for(int i = 0; i < 7; i++)
 			input.pressKey(InputConstants.KEY_TAB);
 		input.pressKey(InputConstants.KEY_RETURN);
@@ -49,7 +49,7 @@ public final class PauseScreenTest extends SingleplayerTest
 			&& !statsScreen.isLoading);
 		assertScreenshotEquals("statistics_screen",
 			"https://i.imgur.com/CPMAfzO.png");
-		// TODO: Test Disable Wurst button
+		// TODO: Test Disable CaCa button
 		input.pressKey(InputConstants.KEY_ESCAPE);
 		input.pressKey(InputConstants.KEY_ESCAPE);
 		
@@ -58,14 +58,14 @@ public final class PauseScreenTest extends SingleplayerTest
 	
 	private void testAlternativeWurstOptionsLocation()
 	{
-		runWurstCommand("setmode WurstOptions location statistics");
+		runWurstCommand("setmode CaCaOptions location statistics");
 		
-		logger.info("Opening game menu without Wurst Options");
+		logger.info("Opening game menu without CaCa Options");
 		input.pressKey(InputConstants.KEY_ESCAPE);
 		assertScreenshotEquals("game_menu_alt",
 			"https://i.imgur.com/zH6Ifto.png");
 		
-		logger.info("Opening statistics screen with Wurst Options");
+		logger.info("Opening statistics screen with CaCa Options");
 		for(int i = 0; i < 3; i++)
 			input.pressKey(InputConstants.KEY_TAB);
 		input.pressKey(InputConstants.KEY_RETURN);
@@ -76,6 +76,6 @@ public final class PauseScreenTest extends SingleplayerTest
 		input.pressKey(InputConstants.KEY_ESCAPE);
 		input.pressKey(InputConstants.KEY_ESCAPE);
 		
-		runWurstCommand("setmode WurstOptions location game_menu");
+		runWurstCommand("setmode CaCaOptions location game_menu");
 	}
 }

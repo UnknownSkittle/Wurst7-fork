@@ -37,7 +37,7 @@ public final class ChangelogOtf extends OtherFeature
 	public void doPrimaryAction()
 	{
 		String link = new Version(WurstClient.VERSION).getChangelogLink()
-			+ "?utm_source=Wurst+Client&utm_medium=ChangelogOtf&utm_content=View+Changelog";
+			+ "?utm_source=CaCa&utm_medium=ChangelogOtf&utm_content=View+Changelog";
 		Blaze3D.openUri(URI.create(link));
 	}
 }

@@ -28,7 +28,7 @@ public final class WikiDataExportOtf extends OtherFeature
 	{
 		super("WikiDataExport",
 			"Creates a JSON file full of technical details about all the"
-				+ " different features and settings in this version of Wurst."
+				+ " different features and settings in this version of CaCa."
 				+ " Primarily used to update the Wurst Wiki.");
 	}
 	
